@@ -506,50 +506,41 @@
             <div class="project-card-name">
                 <div class="project-title">서울맛집 위치 분석</div>
                 <div class="project-content">
-                    GlobalConnect는 유학생들을 위한 커뮤니티 플랫폼으로, 유학생들이 정보를 공유하고 네트워킹할 수 있도록 다양한 기능을 제공합니다. 이 프로젝트는 React와
-                    Node.js를 기반으로 개발되었으며, 주요 기능으로는 게시판, 실시간 채팅, 이벤트 관리 등이 있습니다. MongoDB를 사용하여 데이터를 관리하고, Socket.io를 통해
-                    실시간 통신을 구현하였습니다. 또한 AWS를 이용해 안정적인 호스팅과 배포를 지원합니다. GlobalConnect는 유학생들의 생활을 더욱 편리하고 풍요롭게 만드는 것을 목표로
-                    하며, 팀원들의 협업과 기술적 도전을 통해 완성되었습니다.
+                    공공데이터 포털에서 제공하는 OPEN API를 기반으로 데이터를 분석하여 출력하는 프로젝트입니다.
+                    사람들의 유행하는 습관인 , 식사후 카페를 방문하는 것을 중점으로 하여 카페의 상권에 대한 위치를 분석하고 ,
+                    개인 카페를 제외한 프랜차이즈 카페 상호명을 검색하고 위치를 분석하였습니다.
+                    <br>후기를 분석을 통해서 자주 방문하는 이유를 알수있었습니다.
+                    <br>또한 월평균 소득분위를 직접 100만원 단위로 지정하여 소득분위를 산정하였고, 소득분위를 통해 서울 어느 지역이 가장 핫하고 맛집이 위치하였는지 알수있었습니다.
                 </div>
             </div>
             <div class="project-card-image">
-                <img src="image/p1.png" class="project-image" />
+                <img src="image/빅데이터_Thumbnail.png" class="project-image" />
             </div>
             <div class="project-card-icons">
                 <div class="project-row">
                     <img src="image/period.svg" class="project-icon" />
-                    <div class="project-content-detail">23.06~23.12 / 6개월</div>
+                    <div class="project-content-detail">21.03~21.6 / 3개월</div>
                 </div>
                 <div class="project-row">
                     <img src="image/people.svg" class="project-icon" />
-                    <div class="project-content-detail">5명</div>
+                    <div class="project-content-detail">개인프로젝트</div>
                 </div>
                 <div class="project-row">
                     <img src="image/role.svg" class="project-icon" />
-                    <div class="project-content-detail">프론트엔드 2명 / 백엔드 2명 / 디자이너 1명</div>
+                    <div class="project-content-detail">데이터 분석</div>
                 </div>
-                <div class="project-github-link">
-                    <img src="image/github.svg" class="project-icon" />
-                    <a href="https://github.com/username/repository" target="_blank" rel="noopener noreferrer">GitHub
-                        Repository</a>
-                </div>
+
             </div>
             <div class="project-card-tool">
                 <div class="project-row">
                     <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">React, Redux, HTML5, CSS3, JavaScript</div>
+                    <div class="project-tool-detail">Python , jupyter notebook , Open API</div>
                 </div>
                 <div class="project-row">
                     <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">Node.js, Express.js</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">MongoDB</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">Socket.io</div>
+                    <a href="image/20172048 박주형 빅데이터 기말 프로젝트.pdf" target="_blank">
+                        <div class="project-tool-detail">▶ 자료보기 ◀</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -557,13 +548,13 @@
             <img class="project-prev" src="image/prev.svg" onclick="moveImages('prev')" />
             <div class="project-picture-wrapper">
                 <div class="project-picture side" id="image1">
-                    <img src="image/p1.png" class="project-div-image" />
+                    <img src="image/빅데이터_photo1.png" class="project-div-image" />
                 </div>
                 <div class="project-picture center" id="image2">
-                    <img src="image/p1-detail1.png" class="project-div-image" />
+                    <img src="image/빅데이터_photo2.png" class="project-div-image" />
                 </div>
                 <div class="project-picture side" id="image3">
-                    <img src="image/p1-detail2.png" class="project-div-image" />
+                    <img src="image/빅데이터_photo3.png" class="project-div-image" />
                 </div>
             </div>
             <img class="project-next" src="image/next.svg" onclick="moveImages('next')" />
@@ -576,93 +567,90 @@
             <div class="detail-card-e"></div>
             <div class="detail-card-list">
                 <div class="detail-card-wrapper">
-                    <div class="detail-card-title">게시판 기능</div>
+                    <div class="detail-card-title">서울에 위치한 카페 상호명 분석후 위치 분석</div>
                     <div class="project-row">
                         <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">사용자들이 다양한 주제에 대해 글을 작성하고, 댓글을 달 수 있는 게시판 기능</div>
+                        <div class="project-card-detail">OPEN API를 통해서 데이터를 제공받고 jupyter notebook에서 데이터 가공을 통해 결과를
+                            확인하였습니다.</div>
                     </div>
+                    <br>
                     <div class="project-row">
                         <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">React: 사용자가 글을 작성하고 볼 수 있는 UI 컴포넌트를 설계.</div>
+                        <div class="project-card-detail">1순위 개인카페 , 2순위 이디야 커피 , 3순위 스타벅스로 확인하고 2순위와 3순위의 상호명을 가지고
+                            <br>프랜차이즈지점이 위치한 지역 정보를 확인하였습니다.
+                        </div>
                     </div>
+                    <br>
                     <div class="project-row">
                         <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">Redux: 글 목록과 댓글의 상태를 관리.</div>
+                        <div class="project-card-detail">소비자들이 자주가는 이유를 확인하기위해 웹크롤링을 통해서 후기를 추출하여 분석하였습니다.</div>
                     </div>
+                    <br>
                     <div class="project-row">
                         <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">Axios: 백엔드 API와 통신하여 글 작성, 수정, 삭제 및 댓글 기능 구현.</div>
+                        <div class="project-card-detail">위치를 분석한 결과로는 이디야커피가 많이 위치한 지역은 스타벅스가 비교적 적은 점포수가 위치하였습니다.
+                        </div>
                     </div>
+
+                    <br>
                     <div class="project-row">
                         <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">Node.js & Express.js: RESTful API 서버를 구축하여 글 작성, 수정, 삭제 및 댓글
-                            관리를 위한 엔드포인트 제공.</div>
+                        <div class="project-card-detail">
+                            마찬가지로 스타벅스가 많이 위치한 지역은 이디야커피가 비교적 적은점포가 위치한것을 분석하여 확인할 수 있었습니다.
+                        </div>
                     </div>
+
+                    <br>
                     <div class="project-row">
                         <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">MongoDB: 글과 댓글 데이터를 저장하는 스키마 설계 및 데이터베이스 연동.</div>
-                    </div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">JWT 인증: 사용자 인증을 통해 글 작성 및 수정 권한을 관리.</div>
-                    </div>
-                    <div class="detail-card-title">실시간 채팅 기능</div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">React: 채팅 인터페이스를 설계하고, 실시간 메시지 업데이트를 위한 컴포넌트 구현.</div>
-                    </div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">Socket.io 클라이언트: 실시간 메시지 송수신을 위한 소켓 연결 및 이벤트 핸들링.</div>
-                    </div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">Node.js & Express.js: 채팅 서버를 구축하고, Socket.io 서버를 설정하여 실시간 통신
-                            지원.</div>
-                    </div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">MongoDB: 채팅 기록을 저장하고 불러오는 기능 구현.</div>
-                    </div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">Socket.io: 실시간 메시지 송수신을 위한 소켓 이벤트 핸들링 및 채팅룸 관리.</div>
+                        <div class="project-card-detail">분석한 결과로는 서로 경쟁하는 위치가 아닌 서로 이득이되는 위치에서 운영하고있는것을 확인하였습니다.
+                        </div>
+
+
                     </div>
                 </div>
             </div>
             <div class="detail-card-ts">
-                <div class="detail-card-title">데이터베이스 성능 문제</div>
+                <div class="detail-card-title">소득분위를 금액별로 지정하여 상권 위치 분석</div>
                 <div class="project-row">
                     <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">문제 인식</div>
+                    <div class="project-card-detail">서울시에 존재한 모든상권의 매출을 조사하여 분석하였습니다.</div>
                 </div>
-                <div class="project-card-ex">게시판 기능이 활성화되면서 글과 댓글의 수가 급격히 증가하여, 데이터베이스 성능 저하 문제가 발생했습니다. 게시글을 불러오는데 시간이
-                    오래 걸리고, 서버 응답 시간이 지연되는 문제가 발생했습니다.
+                <br>
+                <div class="project-row">
+                    <img src="image/point.svg" class="project-tool-point" />
+                    <div class="project-card-detail">매출단위를 100만원 단위로 지정하여 1 ~ 9분위까지 정하였습니다.</div>
+                </div>
+                <br>
+                <div class="project-row">
+                    <img src="image/point.svg" class="project-tool-point" />
+                    <div class="project-card-detail">분석결과로는 1.대치동 , 2.서초구 3.서초구 인근지역으로 분석되었습니다. </div>
+                </div>
+                <br>
+                <div class="project-row">
+                    <img src="image/point.svg" class="project-tool-point" />
+                    <div class="project-card-detail">대치동의 경우로는 학구열로 매우 높은지역으로 유명하여 유동인구가 많은 것으로 예상되어 매출이 1순위로 분석된것으로 예측됩니다</div>
+                </div>
+                <br>
+                <div class="project-row">
+                    <img src="image/point.svg" class="project-tool-point" />
+                    <div class="project-card-detail">서초구의 경우로는 서울의 대표 명산 청계산은 다향한 산
+                        행 코스가 조성되어 있어 서울 시민들뿐만아니라 타지역사람들도 많이 찾습니다. 프랑스
+                        인들이 많이 거주하고 있는 서래마을은 트렌디한 맛집과 디저트 카페들이 가득합니다. 몽
+                        마르트 공원이 조성되어 있어 쁘띠프랑스라고 불립니다. 관광거리가 잘 관리되어 있어서
+                        사람들의 많은 사람들이 방문하기에 2순위로 출력된것으로 예측됩니다.
+                        </div>
+                </div>
 
+                <br>
+                <div class="project-row">
+                    <img src="image/point.svg" class="project-tool-point" />
+                    <div class="project-card-detail">3순위도 서초구로 검색됩니다. 2순위와 거리상으로는 버스
+                        로 15분 남짓이면 도착하는 거리로 확인됩니다. 가까운거리 이기에 2순위와 비슷한 이유
+                        인것으로 예측됩니다.
+                        </div>
                 </div>
 
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">문제 해결</div>
-                </div>
-                <div class="project-card-ex">자주 조회되는 필드(작성 날짜, 작성자 등)에 인덱스를 추가하여 쿼리 속도를 개선하였으며, 불필요한 데이터 조회를 최소화하기 위해
-                    쿼리를 최적화하고, 필요한 데이터만 선택적으로 가져오도록 수정했습니다. 이 과정을 통해 데이터베이스 최적화와 성능 튜닝의 중요성을 이해하게 되었습니다. 또한, 대용량 데이터를
-                    효과적으로 관리하기 위한 인덱스 설계와 샤딩 기법을 익히게 되었습니다. 이를 통해 향후 데이터베이스 관련 문제를 보다 신속하고 효율적으로 해결할 수 있는 역량을 갖추게 되었습니다.
-                </div>
-                <div class="detail-card-title">실시간 채팅 안정성 문제</div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">문제 인식</div>
-                </div>
-                <div class="project-card-ex">실시간 채팅 기능 도입 후, 사용자가 많아지면서 채팅 메시지가 지연되거나 연결이 자주 끊기는 문제가 발생했습니다. 이는 사용자 경험을
-                    크게 저해하는 요소로 작용했습니다.</div>
-
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">문제 해결</div>
-                </div>
-                <div class="project-card-ex">서버 로그와 네트워크 트래픽을 분석하여 Socket.io 연결이 끊어지거나 메시지 지연이 발생하는 원인을 파악하여, Socket.io
-                    서버를 여러 대로 확장하고, 로드 밸런서를 사용하여 부하를 분산시키고 메모리 누수 현상을 방지하기 위해 불필요한 데이터와 연결을 주기적으로 정리했습니다. </div>
 
             </div>
         </div>
