@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:url" content="https://scccurri.github.io/portfolio/index.html" /> -->
+  <meta property="og:title" content="박주형 이력서입니다" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="박주형 이력서입니다." />
+  <meta property="og:site_name" content="SCC Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <title>박주형 이력서</title>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    :root {
+      --main-organization-color: #222425;
+      --sub-organization-color: #d3d3d3;
+      --main-svg-filter: invert(12%) sepia(6%) saturate(445%) hue-rotate(156deg) brightness(99%) contrast(94%);
+      --main-bg-color: #f5f5f5;
+      --main-font-color: #222425;
+      --secondary-font-color: #5f666b;
+      --highlight-color: #ffffff;
+      --shadow-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .font-regular {
+      font-family: "NanumSquareOTF-Regular", Helvetica;
+      font-weight: 400;
+    }
+
+    .svg-filter {
+      filter: var(--main-svg-filter);
+    }
+
+    .font-bold {
+      font-family: "NanumSquareOTF-ExtraBold", Helvetica;
+      font-weight: 700;
+    }
+
+    .font-extra-bold {
+      font-family: var(--font-family-bold);
+      font-weight: var(--font-weight-extra-bold);
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+    }
+
+    .size-full {
+      width: 100%;
+      height: 100%;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url("image/bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .background {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .frame {
+      max-width: 93.75rem;
+      height: auto;
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      padding: 4.38rem 1.25rem;
+      align-items: flex-start;
+    }
+
+    .side-bar {
+      width: 19.5rem;
+      flex-shrink: 0;
+      height: auto;
+      background-color: var(--main-bg-color);
+      border-radius: 1.25rem;
+      box-shadow: 0 0.25rem 0.25rem var(--shadow-color);
+      padding-bottom: 1.88rem;
+      position: sticky;
+      top: 4.38rem;
+      align-self: flex-start;
+    }
+
+    .side-bar-logo {
+      height: auto;
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      max-width: 8rem;
+      margin-top: 2.19rem;
+    }
+
+    .side-bar-profile {
+      position: relative;
+      width: 15rem;
+      height: 15rem;
+      margin-top: 1.88rem;
+      margin-left: 2.25rem;
+      background-color: #d9d9d9;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .side-bar-profile-picture {
+      object-fit: cover;
+      object-position: center 20%;
+      transform: scale(1.1) translateY(5%);
+      transition: transform 0.3s ease;
+    }
+
+    .side-bar-profile:hover .side-bar-profile-picture {
+      transform: scale(1.15) translateY(2%);
+    }
+
+    .name-tag {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 2.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .name {
+      position: relative;
+      width: 100%;
+      color: var(--main-organization-color);
+      font-size: 2.944375rem;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal;
+      word-break: break-word;
+    }
+
+    .sub-name {
+      position: relative;
+      width: 100%;
+      margin-top: 0.625rem;
+      color: #81898f;
+      font-size: 1.13125rem;
+      text-align: center;
+      letter-spacing: 0;
+      line-height: normal;
+      word-break: break-word;
+    }
+
+    .info {
+      position: relative;
+      width: 15rem;
+      margin-top: 2.5rem;
+      margin-left: 2.25rem;
+      padding-bottom: 1rem;
+    }
+
+    .info-detail {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.625rem;
+    }
+
+    .info-detail-icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5625rem;
+      flex-shrink: 0;
+    }
+
+    .info-detail-exp {
+      color: var(--secondary-font-color);
+      font-size: 0.700625rem;
+      letter-spacing: 0;
+      line-height: 1rem;
+      word-break: break-word;
+      flex-grow: 1;
+    }
+
+    .strength-set {
+      position: relative;
+      width: 14.9375rem;
+      height: 5.75rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .strength {
+      width: 4.5rem;
+      height: 5.75rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .strength-img {
+      width: 4.375rem;
+      height: 4.25rem;
+      margin-bottom: 0.5625rem;
+    }
+
+    .strength-text {
+      color: var(--secondary-font-color);
+      font-size: 0.6875rem;
+      line-height: 1.2;
+    }
+
+    .line {
+      position: relative;
+      width: 15.0625rem;
+      height: 0.05rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+      background: rgba(34, 36, 37, 0.2);
+    }
+
+    .skill {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 1.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .skill-title {
+      position: relative;
+      height: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-title-img {
+      width: 0.8125rem;
+      height: 0.8125rem;
+      position: absolute;
+      left: 0;
+      top: 0.125rem;
+    }
+
+    .skill-title-text {
+      position: absolute;
+      width: 13.5rem;
+      top: 0;
+      left: 1.4375rem;
+      color: var(--secondary-font-color);
+      font-size: 0.70625rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .skill-item {
+      margin-bottom: 0.75rem;
+      position: relative;
+      clear: both;
+    }
+
+    .skill-set {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .point {
+      width: 0.4375rem;
+      height: 0.4375rem;
+      background-color: var(--main-font-color);
+      border-radius: 0.23125rem;
+      margin-right: 0.5rem;
+    }
+
+    .skill-text {
+      color: var(--main-font-color);
+      font-size: 0.78125rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .skill-bar {
+      width: 14.5625rem;
+      height: 0.875rem;
+      background-color: var(--highlight-color);
+      border-radius: 0.588125rem;
+      box-shadow: 0 0.078125rem 0.24375rem var(--shadow-color);
+      margin-top: 0.625rem;
+      position: relative;
+    }
+
+    .skill-bar-progress {
+      position: absolute;
+      height: 0.875rem;
+      left: 0.4375rem;
+    }
+
+    .skill-bar-rectangle {
+      position: absolute;
+      height: 0.375rem;
+      top: 0.25rem;
+      left: 0;
+      background-color: var(--main-organization-color);
+      border-radius: 0.509375rem;
+    }
+
+    .skill-bar-o1 {
+      position: absolute;
+      width: 0.875rem;
+      height: 0.875rem;
+      top: 0;
+      background-color: var(--highlight-color);
+      border-radius: 0.43125rem;
+      box-shadow: 0 0 0.156875rem #00000026;
+    }
+
+    .skill-bar-o2 {
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      top: 0.1875rem;
+      background-color: var(--main-organization-color);
+      border-radius: 0.234375rem;
+    }
+
+    .license {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 2.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .license-img {
+      width: 1rem;
+      height: 0.71875rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .license-title {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.4375rem;
+      color: var(--secondary-font-color);
+      font-size: 0.70625rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .license-wrap {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 1.25rem;
+    }
+
+    .license-content {
+      position: relative;
+      height: 2.4375rem;
+      background-color: var(--sub-organization-color);
+      border-radius: 0.3125rem;
+      border: 0.125rem solid;
+      border-color: var(--main-organization-color);
+      margin-bottom: 0.3125rem;
+    }
+
+    .license-text {
+      position: relative;
+      padding: 0.625rem;
+      color: var(--main-font-color);
+      font-size: 0.78125rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .education {
+      position: relative;
+      width: 15.0625rem;
+      margin-top: 2.5rem;
+      margin-left: 2.25rem;
+    }
+
+    .education-title {
+      position: relative;
+      height: 0.9375rem;
+      margin: 4rem 0 1rem 0;
+    }
+
+    .education-text {
+      position: relative;
+      width: 13.5rem;
+      margin-left: 1.5625rem;
+      color: var(--secondary-font-color);
+      font-size: 0.700625rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .education-img {
+      position: absolute;
+      width: 0.9375rem;
+      height: 0.71875rem;
+      top: 0.125rem;
+      left: 0;
+    }
+
+    .education-name {
+      color: var(--main-font-color);
+      font-size: 1.0275rem;
+      line-height: normal;
+      margin-bottom: 0.625rem;
+      text-align: left;
+    }
+
+    .education-detail {
+      color: var(--secondary-font-color);
+      font-size: 0.700625rem;
+      line-height: normal;
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+
+    /* 메인 CSS */
+    .exp-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .proj-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .intro-logo {
+      height: auto;
+      max-width: 45rem;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+      aspect-ratio: attr(width) / attr(height);
+    }
+
+    .main-content {
+      width: calc(100% - 20.25rem);
+      margin-left: 2.5rem;
+    }
+
+    .intro-div {
+      width: 62.4375rem;
+      height: 29.4375rem;
+      border-radius: 0.939375rem;
+      overflow: hidden;
+      box-shadow: 0 0.250625rem 1.253125rem #00000033;
+      background: var(--highlight-color);
+      position: relative;
+    }
+
+    .intro-frame {
+      position: relative;
+      height: 29.4375rem;
+      background: linear-gradient(180deg,
+          rgba(34, 36, 37, 0) 0%,
+          var(--sub-organization-color) 100%);
+    }
+
+    .intro-logo {
+      position: absolute;
+      opacity: 20%;
+      width: 40.0703125rem;
+      height: 13.125rem;
+      top: 16.31875rem;
+      left: 7.875rem;
+    }
+
+    .intro-picture-frame {
+      position: absolute;
+      width: 22.25rem;
+      height: 22.25rem;
+      top: 3.578125rem;
+      left: 36.1875rem;
+      background-color: var(--highlight-color);
+    }
+
+    .intro-picture {
+      position: absolute;
+      width: 22.25rem;
+      height: 22.25rem;
+      top: 0;
+      left: 0;
+      object-position: center 20%;
+      object-fit: cover;
+    }
+
+    .intro-star {
+      position: absolute;
+      width: 6.5rem;
+      height: 6.5rem;
+      top: 4.5rem;
+      left: 32.90625rem;
+    }
+
+    .intro-content {
+      position: relative;
+      width: 29.1rem;
+      top: 7.4rem;
+      left: 3.3rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro-quote {
+      width: 3.1rem;
+      height: 2.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .intro-text {
+      width: 28.8rem;
+      color: var(--main-font-color);
+      font-size: 2.3rem;
+      letter-spacing: 0;
+      line-height: normal;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text-detail {
+      width: 28.8rem;
+      color: var(--secondary-font-color);
+      font-size: 0.9rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .intro-row-line {
+      position: absolute;
+      width: 62.4rem;
+      height: 0.05rem;
+      top: 3.5rem;
+      left: 0;
+      background: var(--main-font-color);
+    }
+
+    .intro-column-line {
+      position: absolute;
+      width: 0.05rem;
+      height: 29.4rem;
+      top: 0;
+      left: 36.2rem;
+      background: var(--main-font-color);
+    }
+
+    /* 메인 CSS */
+    .exp-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .proj-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .intro-logo {
+      height: auto;
+      max-width: 45rem;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+      aspect-ratio: attr(width) / attr(height);
+    }
+
+    .main-content {
+      width: calc(100% - 20.25rem);
+      margin-left: 2.5rem;
+    }
+
+    .intro-div {
+      width: 62.4375rem;
+      height: 29.4375rem;
+      border-radius: 0.939375rem;
+      overflow: hidden;
+      box-shadow: 0 0.250625rem 1.253125rem #00000033;
+      background: var(--highlight-color);
+      position: relative;
+    }
+
+    .intro-frame {
+      position: relative;
+      height: 29.4375rem;
+      background: linear-gradient(180deg,
+          rgba(34, 36, 37, 0) 0%,
+          var(--sub-organization-color) 100%);
+    }
+
+    .intro-logo {
+      position: absolute;
+      opacity: 20%;
+      width: 40.0703125rem;
+      height: 13.125rem;
+      top: 16.31875rem;
+      left: 7.875rem;
+    }
+
+    .intro-picture-frame {
+      position: absolute;
+      width: 22.25rem;
+      height: 22.25rem;
+      top: 3.578125rem;
+      left: 36.1875rem;
+      background-color: var(--highlight-color);
+    }
+
+    .intro-picture {
+      position: absolute;
+      width: 22.25rem;
+      height: 22.25rem;
+      top: 0;
+      left: 0;
+      object-position: center 20%;
+      object-fit: cover;
+    }
+
+    .intro-star {
+      position: absolute;
+      width: 6.5rem;
+      height: 6.5rem;
+      top: 4.5rem;
+      left: 32.90625rem;
+    }
+
+    .intro-content {
+      position: relative;
+      width: 29.1rem;
+      top: 7.4rem;
+      left: 3.3rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro-quote {
+      width: 3.1rem;
+      height: 2.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .intro-text {
+      width: 28.8rem;
+      color: var(--main-font-color);
+      font-size: 2.3rem;
+      letter-spacing: 0;
+      line-height: normal;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text-detail {
+      width: 28.8rem;
+      color: var(--secondary-font-color);
+      font-size: 0.9rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .intro-row-line {
+      position: absolute;
+      width: 62.4rem;
+      height: 0.05rem;
+      top: 3.5rem;
+      left: 0;
+      background: var(--main-font-color);
+    }
+
+    .intro-column-line {
+      position: absolute;
+      width: 0.05rem;
+      height: 29.4rem;
+      top: 0;
+      left: 36.2rem;
+      background: var(--main-font-color);
+    }
+
+    /* 경력 DIV */
+    .exp-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .exp-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.3rem;
+    }
+
+    .exp-img {
+      width: 1.7rem;
+      height: 1.4rem;
+      margin-right: 0.5rem;
+    }
+
+    .exp-text {
+      color: var(--main-font-color);
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
+    }
+
+    .exp-cards-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-card-frame {
+      position: relative;
+      padding: 0 4rem;
+      transition: transform 0.5s ease-in-out;
+      display: flex;
+      align-items: stretch;
+      gap: 1rem;
+    }
+
+    .exp-card {
+      position: relative;
+      width: 19.7rem;
+      border-radius: 1rem;
+      background: var(--sub-organization-color);
+      padding: 0.8rem;
+      min-width: 33.33%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-card-period-wrapper {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-company {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-card-term {
+      font-size: 0.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-team {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-task {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-task-text {
+      font-size: 0.6rem;
+    }
+
+    .exp-card-proj {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-proj-name {
+      font-size: 0.6rem;
+    }
+
+    .exp-card-task-term {
+      font-size: 0.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-task-detail-text {
+      font-size: 0.6rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      width: 70%;
+      /* 하단 여백 추가 */
+    }
+
+    .exp-card-period-wrapper {
+      width: fit-content;
+      min-width: 3.4rem;
+      min-height: 1.2rem;
+      border-radius: 0.4rem;
+      background: var(--main-organization-color);
+      margin: 0 auto 0.8rem;
+      padding: 0.1rem 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-card-period {
+      color: var(--highlight-color);
+      font-size: 0.6rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    .exp-card-company {
+      text-align: center;
+      color: var(--main-font-color);
+      font-size: 1.2rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: break-word;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-card-term {
+      text-align: center;
+      color: var(--secondary-font-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin: 0 auto 1rem;
+    }
+
+    .exp-card-team {
+      width: fit-content;
+      min-width: 3.4rem;
+      min-height: 1.2rem;
+      height: 0.9rem;
+      border-radius: 0.4rem;
+      background: var(--main-organization-color);
+      margin: 0 auto 0.8rem;
+      padding: 0.1rem 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-card-team-name {
+      color: var(--highlight-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      text-align: center;
+      letter-spacing: 0;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .exp-card-task {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .point {
+      margin-right: 0.5rem;
+      margin-top: 0.2rem;
+    }
+
+    .exp-card-task-text {
+      width: auto;
+      max-width: 14.3rem;
+      color: var(--main-font-color);
+      font-size: 0.7rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: break-word;
+    }
+
+    .exp-card-task-term {
+      width: 100%;
+      color: var(--main-font-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 0;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+
+    .exp-card-proj {
+      width: fit-content;
+      min-width: 3.4rem;
+      min-height: 1.2rem;
+      height: 0.9rem;
+      border-radius: 0.4rem;
+      background: var(--main-organization-color);
+      margin: 0 auto 0.8rem;
+      padding: 0.1rem 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-card-proj-name {
+      color: var(--highlight-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    .exp-card-task-detail {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .exp-card-task-detail-text {
+      color: var(--main-font-color);
+      font-size: 0.7rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: break-word;
+      margin-bottom: 1rem;
+    }
+
+    /* 프로젝트 div*/
+    .proj-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .proj-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.9rem;
+      margin: 2rem 0;
+    }
+
+    .proj-title-img {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.6rem;
+    }
+
+    .proj-title-text {
+      color: var(--main-font-color);
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .proj-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.7rem;
+      justify-content: space-between;
+    }
+
+    .proj {
+      width: calc(50% - 0.85rem);
+      height: auto;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-bottom: 1.6rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj:hover {
+      transform: scale(1.05);
+    }
+
+    .proj-main-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: var(--main-organization-color);
+      border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+    .proj-content {
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 0.9rem 0.9rem;
+      border: 0.1rem solid var(--main-organization-color);
+      padding: 1.3rem 1.6rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-content-title {
+      color: var(--main-font-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      word-break: break-word;
+    }
+
+    .proj-content-text {
+      color: var(--secondary-font-color);
+      font-size: 0.8rem;
+      line-height: 1.4;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+      flex-grow: 1;
+    }
+
+
+    @media (max-width: 64rem) {
+      .frame {
+        flex-direction: column;
+        padding: 1.2rem;
+      }
+
+      .side-bar,
+      .main-content {
+        width: 100%;
+        max-width: 37.5rem;
+        margin: 0 auto 1.2rem;
+      }
+
+      .side-bar {
+        position: relative;
+        top: 0;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .exp-cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .exp-card {
+        margin-bottom: 1.2rem;
+      }
+
+      .proj-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+      }
+
+      .proj {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .background {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+
+      .frame {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side-bar,
+      .intro-div,
+      .exp-div,
+      .proj-div {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+
+      .side-bar {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .side-bar-logo,
+      .side-bar-profile,
+      .name-tag,
+      .info,
+      .strength-set,
+      .line,
+      .skill,
+      .license,
+      .education {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .education-text,
+      .skill-title-text,
+      .license-title {
+        position: absolute;
+      }
+
+      .skill-title-text,
+      .education-text,
+      .license-title {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: var(--font-family-bold);
+        text-align: left;
+      }
+
+      .license-title {
+        margin-left: 0;
+      }
+
+      .skill-title-img,
+      .education-img,
+      .license-img {
+        position: absolute;
+        left: 0;
+        margin-right: 10px;
+        /* display: none; 이 을 제거하거나 주석 처리 */
+      }
+
+      .skill-title,
+      .education-title,
+      .license {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        /* 아이콘과 텍스트의 높이에 맞게 조정 */
+      }
+
+      .intro-div {
+        width: 100%;
+        height: auto;
+        border-radius: 0.939375rem;
+        overflow: hidden;
+        box-shadow: 0 0.250625rem 1.253125rem #00000033;
+        background: var(--highlight-color);
+        position: relative;
+        margin: 20px auto;
+        /* 추가: 모바일 화면에서 중앙 정렬 */
+        padding: 20px;
+        /* 추가: 내부 여백 추가 */
+      }
+
+      .intro-frame {
+        text-align: center;
+        height: auto;
+        /* 수정: 높이를 자동으로 조정 */
+        background: none;
+        /* 수정: 배경 제거 */
+      }
+
+      .intro-logo,
+      .intro-picture-frame,
+      .intro-row-line,
+      .intro-column-line,
+      .intro-star {
+        display: none;
+      }
+
+      .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: #81898f;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        /* 추가: 내부 여백 추가 */
+      }
+
+      .intro-quote {
+        width: 3.1rem;
+        height: 2.6rem;
+        margin: 1.25rem;
+      }
+
+      .intro-text {
+        font-size: 16px;
+        width: 100%;
+        word-wrap: break-word;
+        text-align: center;
+        /* 추가: 텍스트 중앙 정렬 */
+      }
+
+      .intro-text-detail {
+        font-size: 10px;
+        width: 100%;
+        word-wrap: break-word;
+        top: 7rem;
+        text-align: center;
+        /* 추가: 텍스트 중앙 정렬 */
+      }
+
+      /* 경력 Div */
+      .exp-div {
+        margin: 20px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* 수정: 세로 배치 */
+        align-items: flex-start;
+      }
+
+      .exp-cards-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        /* 수정: 세로 배치 */
+        align-items: center;
+      }
+
+      .exp-card-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        transition: transform 0.5s ease-in-out;
+        flex-direction: column;
+        /* 수정: 세로 배치 */
+      }
+
+      .exp-card {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        transform: scale(1);
+        opacity: 1;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all 0.5s ease-in-out;
+        flex: 0 0 100%;
+      }
+
+      .exp-card-period-wrapper {
+        width: fit-content;
+        min-width: 3.4rem;
+        height: 0.9rem;
+        border-radius: 0.4rem;
+        background: var(--main-organization-color);
+        margin: 0 auto 0.4rem;
+        padding: 0.1rem 0.5rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .exp-card-period {
+        color: var(--highlight-color);
+        font-size: 0.5rem;
+        line-height: normal;
+        white-space: nowrap;
+        letter-spacing: 0;
+      }
+
+      .exp-card-company,
+      .exp-card-term,
+      .exp-card-task-text,
+      .exp-card-task-term,
+      .exp-card-task-detail-text {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .exp-card-task,
+      .exp-card-task-detail {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .point {
+        margin-right: 0.5rem;
+        margin-top: 0.2rem;
+      }
+
+      #card1,
+      #card3 {
+        display: none;
+      }
+
+      .exp-prev,
+      .exp-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+      }
+
+      .exp-prev {
+        left: -15px;
+      }
+
+      .exp-next {
+        right: -15px;
+      }
+
+      .proj-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+      }
+
+      .proj {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .proj-main-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .proj-content {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        background-color: var(--sub-organization-color);
+        border-radius: 0 0 15px 15px;
+      }
+
+      .proj-content-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .proj-content-text {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .info-detail {
+        justify-content: flex-start;
+      }
+
+      .info-detail-exp {
+        text-align: left;
+      }
+
+      .project-picture.center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+      }
+
+      .project-div-image {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="w-full">
+  <div class="background w-full">
+    <div class="frame w-full">
+      <!-- side-bar -->
+      <div class="side-bar">
+        <img class="side-bar-logo w-full" src="image/basiclogo.svg" />
+        <div class="side-bar-profile">
+          <img class="side-bar-profile-picture size-full" src="image/박주형_증명사진.jpg" />
+        </div>
+        <div class="name-tag">
+          <div class="name font-bold">박주형</div>
+          <div class="sub-name font-regular">백엔드 개발자</div>
+          <div class="sub-name font-regular"><a href="https://someguy163.github.io/info/#about" style="font: bolder; color: #5f666b; text-decoration: none; font-size:medium;">▶다른 포트폴리오 보러가기◀</a></div>
+          
+        </div>
+
+
+
+        
+
+        <div class="info">
+          <div class="info-detail">
+            <object class="info-detail-icon svg-filter" data="image/detail-1.svg" color="red"></object>
+            <div class="info-detail-exp font-regular">
+              Java 를 활용하여 <br />Spring , Spring boots를 사용합니다
+            </div>
+          </div>
+          <div class="info-detail">
+            <img class="info-detail-icon svg-filter" src="image/detail-2.svg" />
+            <div class="info-detail-exp font-regular">
+              1998.02.28 / 경기도 화성시
+            </div>
+          </div>
+          <div class="info-detail">
+            <img class="info-detail-icon svg-filter" src="image/detail-3.svg" />
+            <div class="info-detail-exp font-regular">
+              jah05159@naver.com
+            </div>
+          </div>
+          <div class="info-detail">
+            <img class="info-detail-icon svg-filter" src="image/detail-4.svg" />
+            <div class="info-detail-exp font-regular">010-4064-8689</div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="strength-set">
+          <div class="strength">
+            <img class="strength-img svg-filter" src="image/strength-1.png" />
+            <div class="strength-text font-regular">의사소통</div>
+          </div>
+          <div class="strength">
+            <img class="strength-img svg-filter" src="image/strength-2.png" />
+            <div class="strength-text font-regular">빠른 일처리</div>
+          </div>
+          <!-- <div class="strength">
+            <img class="strength-img svg-filter" src="image/strength-3.png" />
+            <div class="strength-text font-regular">리더십</div>
+          </div> -->
+        </div>
+        <div class="line"></div>
+        <div class="skill">
+          <div class="skill-title w-full">
+            <img class="skill-title-img svg-filter" src="image/skill-title.svg" />
+            <div class="skill-title-text font-regular">SKILL SET</div>
+          </div>
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">HTML</div>
+            </div>
+            <!-- 여기 아래 data-progerss 숫자 수정해서 수치 변경가능 -->
+            <div class="skill-bar" data-progress="70">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">CSS</div>
+            </div>
+            <div class="skill-bar" data-progress="60">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">JavaScript</div>
+            </div>
+            <div class="skill-bar" data-progress="55">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Java</div>
+            </div>
+            <!-- 여기 아래 data-progerss 숫자 수정해서 수치 변경가능 -->
+            <div class="skill-bar" data-progress="70">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Spring</div>
+            </div>
+            <div class="skill-bar" data-progress="65">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-set">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Spring boots</div>
+            </div>
+            <div class="skill-bar" data-progress="65">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Data Base</div>
+            </div>
+            <!-- 여기 아래 data-progerss 숫자 수정해서 수치 변경가능 -->
+            <div class="skill-bar" data-progress="80">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Jsp</div>
+            </div>
+            <!-- 여기 아래 data-progerss 숫자 수정해서 수치 변경가능 -->
+            <div class="skill-bar" data-progress="60">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Thymeleaf</div>
+            </div>
+            <!-- 여기 아래 data-progerss 숫자 수정해서 수치 변경가능 -->
+            <div class="skill-bar" data-progress="60">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="skill-item w-full">
+            <div class="skill-set w-full">
+              <div class="point svg-filter"></div>
+              <div class="skill-text font-bold">Git</div>
+            </div>
+            <!-- 여기 아래 data-progerss 숫자 수정해서 수치 변경가능 -->
+            <div class="skill-bar" data-progress="40">
+              <div class="skill-bar-progress">
+                <div class="skill-bar-rectangle"></div>
+                <div class="skill-bar-o1"></div>
+                <div class="skill-bar-o2"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="line"></div>
+        <div class="license">
+          <img class="license-img svg-filter" src="image/license.svg" />
+          <div class="license-title font-regular">LICENSE</div>
+          <div class="license-wrap">
+            <div class="license-content">
+              <div class="license-text font-bold">SQLD 자격증</div>
+            </div>
+            <!-- <div class="license-content">
+              <div class="license-text font-bold">ADsP 자격증</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="education">
+          <div class="education-title w-full">
+            <img class="education-img svg-filter" src="image/education.svg" />
+            <div class="education-text font-regular">EDUCATION</div>
+          </div>
+          <div class="education-content w-full">
+            <div class="education-name font-bold">능동 고등학교</div>
+            <p class="education-detail font-regular">
+              2014 ~ 2016 경기도 화성시
+            </p>
+            <div class="education-name font-bold">백석 대학교</div>
+            <p class="education-detail font-regular">
+              2017 ~ 2023 충청남도 천안
+            </p>
+            <div class="education-name font-bold">엠아이티 능력개발원</div>
+            
+            <p class="education-detail font-regular">
+              클라우드 기반의 자바 웹 애플리케이션 개발
+            </p>
+            
+            
+            <p class="education-detail font-regular">
+              2023.12 ~ 2024.06 경기도 영통시
+            </p>
+          </div>
+
+
+          
+        </div>
+        <div class="line"></div>
+      </div>
+      <!-- main content -->
+      <div class="main-content">
+        <!-- 자기소개 div -->
+        <div class="intro-div">
+          <div class="intro-frame">
+            <img class="intro-logo w-full" src="image/basiclogo.svg" />
+            <div class="intro-picture-frame">
+              <img class="intro-picture" src="image/박주형_증명사진.jpg" />
+            </div>
+            <div class="intro-row-line"></div>
+
+            <div class="intro-row-line" style="top: 412px"></div>
+            <div class="intro-column-line"></div>
+            <div class="intro-column-line" style="left: 934px"></div>
+            <img class="intro-star svg-filter" src="image/star.svg" />
+            <div class="intro-content">
+              <img class="intro-quote svg-filter" src="image/quote.svg" />
+              <p class="intro-text font-bold">
+                변화에 빠르게 적응하는<br />개발자, 박주형 입니다.
+              </p>
+              <p class="intro-text-detail font-regular">
+                다이내믹한 기업 문화와 빠른 성장에 매력을 느꼈습니다.
+                <br />저의 창의적이고 유연한 사고로 팀에 신선한 아이디어를
+                제공하고 싶습니다. <br />함께 도전하고 성장하는 과정에서 큰
+                성취를 이루고 싶습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 경력 div -->
+        <!-- <div class="exp-div">
+          <div class="exp-title">
+            <img class="exp-img svg-filter" src="image/exp.svg" />
+            <div class="exp-text font-bold">EXPERIENCE</div>
+          </div>
+          <div class="exp-cards-container">
+            <div class="exp-card-frame flex-center size-full">
+              <div class="exp-card">
+                <div class="exp-card-period-wrapper flex-center">
+                  <div class="exp-card-period font-regular">3개월</div>
+                </div>
+                <div class="exp-card-company font-bold">
+                  (주) 지트
+                </div>
+                <div class="exp-card-term">2023.08~2023.11</div>
+                <div class="exp-card-team">
+                  <div class="exp-card-team-name font-bold">
+                    유지보수팀
+                  </div>
+                </div>
+                <div class="exp-card-task">
+                  <div class="point svg-filter"></div>
+                  <div class="exp-card-task-text font-regular">
+                    벡엔드 공간정보기술 DB가공 , 코드수정
+                  </div>
+                </div>
+                <div class="exp-card-proj">
+                  <div class="exp-card-proj-name font-bold">
+                    해당 지자체 지적도등 여러 정보 최신화
+                  </div>
+                </div>
+                <div class="exp-card-task-detail">
+                  <div class="point svg-filter"></div>
+                  <div class="exp-card-task-detail-text font-regular">
+                    여러DB를 통해서 정보를 최신화하고 , 사용자 요구사항에 맞춰 원하는 정보로 출력되도록 수정하는 업무
+                  </div>
+                </div>
+              </div>
+
+
+              
+
+
+            </div>
+          </div>
+        </div> -->
+
+
+        
+        <!-- 프로젝트 -->
+
+        <!-- 프로젝트 div -->
+        <div class="proj-div">
+          <div class="proj-title">
+            <img class="proj-title-img svg-filter" src="image/proj.svg" />
+            <div class="proj-title-text font-bold">PROJECT</div>
+          </div>
+
+
+
+
+
+          <div class="proj-container">
+
+            <div class="proj" onclick="location.href='project1.html'">
+              <img src="image/Connect_Thumbnail.png" alt="프로젝트 이미지" class="proj-main-img" />
+              <div class="proj-content">
+                <div class="proj-content-title font-bold">
+                  구매조달 시스템
+                </div>
+                <p class="proj-content-text font-regular">기간 : 2024.05.10 ~ 2024.06.14</p>
+                <br>
+                <p class="proj-content-text font-regular">
+                  서로다른 로그인계정으로 제품등록 , 업체등록진행하고 제품에 맞는 품목을 등록하고 계약을 진행하는 프로젝트입니다.
+                  도면과 업체를 등록해서 계약완료를 진행하고 , 계약완료된 품목을 발주 , 진척검수 , 입고 , 출고 프로세스 과정을 진행하고 월별 , 부류별 출고금액을 확인할 수 있습니다
+                </p>
+              </div>
+            </div>
+
+            <div class="proj" onclick="location.href='project2.html'">
+              <img src="image/운동ez_Thumbnail.png" alt="프로젝트 이미지" class="proj-main-img" />
+              <div class="proj-content">
+                <div class="proj-content-title font-bold">
+                  운동이지(운동easy)
+                </div>
+                <p class="proj-content-text font-regular">기간 : 2024.03.26 ~ 2024.05.02</p>
+                <br>
+                <p class="proj-content-text font-regular">
+                  운동하기 어려운 사용자들을 위한 운동영상제공 웹사이트 입니다
+                  관리자가 가입신청 들어온 트레이너만 운동영상을 등록해서 상담신청 받을수있습니다. 상담을 통해서 트레이너와 사용자가 일정을 잡을수있습니다.
+                  부적합한 영상이 업로드 되었을시 사용자가 신고기능을 통해 관리자 계정으로 정보가 전송되고 , 관리자는 영상을 삭제할 수 있습니다.
+                </p>
+              </div>
+            </div>
+            
+            <div class="proj" onclick="location.href='project3.html'">
+              <img src="image/레식피_Thumbnail.png" alt="프로젝트 이미지" class="proj-main-img" />
+              <div class="proj-content">
+                <div class="proj-content-title font-bold">레식피</div>
+
+                <p class="proj-content-text font-regular">기간 : 2022.09.01 ~ 2022.12.22</p>
+                <br>
+                <p class="proj-content-text font-regular">
+                  사용자가 보유 , 구매한 식자재를 등록하면 맞는 레시피가 제공되는 서비스입니다.
+                  <br>
+                  사용자 로그인 , 식자재 등록 , 레시피 제공 , 레시피 추천 , 레시피 조회 , 댓글 작성 등의 기능을 구현하였습니다.
+
+                </p>
+              </div>
+            </div>
+
+
+            <div class="proj" onclick="location.href='project4.html'">
+              <img src="image/팀파일_Thumbnail.png" alt="프로젝트 이미지" class="proj-main-img" />
+              <div class="proj-content">
+                <div class="proj-content-title font-bold">
+                  팀파일관리 프로젝트
+                </div>
+
+                <p class="proj-content-text font-regular">기간 : 2022.09.01 ~ 2022.12.22</p>
+                <p class="proj-content-text font-regular">
+                  그룹을 만들어서 사용자가 그룹에 가입,탈퇴 할수있는 서비스를 제공합니다
+                  가입한 그룹안에서만 그룹원들끼리만 파일공유가 가능한 서비스를 제공하는 사이트입니다
+                </p>
+              </div>
+            </div>
+
+
+
+            <div class="proj" onclick="location.href='project5.html'">
+              <img src="image/빅데이터_Thumbnail.png" alt="프로젝트 이미지" class="proj-main-img" />
+              <div class="proj-content">
+                <div class="proj-content-title font-bold">
+                  서울맛집 위치 분석(빅데이터)
+                </div>
+                <p class="proj-content-text font-regular">기간 : 2021.09 ~ 2021.12</p>
+                <br>
+                <p class="proj-content-text font-regular">
+                  공공데이터 포털에서 제공하는 오픈 API를 제공받은후 jupyter notebook에서 CSV파일을 가공한후 원하는 데이터를 추출합니다
+                  카페 상권의 월 지출내역을 기준으로 직접 소득분위를 1 ~ 9 분위로 나눈후 등급을 정해줍니다
+                  등급에서 가공되어서 나온 상위 1 ~ 3등을 추출하고 위치가 어디인지 분석한후 그 주변상권들이 무엇이 있는지 보여줍니다.
+                </p>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+      <!-- 메인 컨텐츠 끝 -->
+
+    </div>
+  </div>
+
+
+
+
+  <script>
+
+
+alert("열람방법\n\n1.이미지 사진아래에 있는 '다른포트폴리오 보러가기'를 통해서 자소서를 확인하실 수 있습니다'.\n\n2.프로젝트를 클릭하여 요약된 정보를 확인하실 수 있습니다.");
+
+    document.addEventListener("DOMContentLoaded", function () {
+      setupSkillBars();
+      setLanguageAndMode();
+    });
+
+    function setupSkillBars() {
+
+      const skillBars = document.querySelectorAll(".skill-bar");
+      skillBars.forEach((bar) => {
+        const progress = bar.getAttribute("data-progress");
+        bar.style.setProperty("--progress", progress);
+
+        const progressBar = bar.querySelector(".skill-bar-progress");
+        progressBar.style.width = `calc((100% - 14px) * ${progress} / 100)`;
+
+        const rectangle = bar.querySelector(".skill-bar-rectangle");
+        rectangle.style.width = `calc(100% - 5px)`;
+
+        const o1 = bar.querySelector(".skill-bar-o1");
+        const o2 = bar.querySelector(".skill-bar-o2");
+        o1.style.left = `calc(100% - 14px)`;
+        o2.style.left = `calc(100% - 11px)`;
+      });
+    }
+
+
+  </script>
+</body>
+
+</html>
