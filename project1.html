@@ -1,814 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" data-theme="light">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:type" content="website" />
-    <!-- <meta property="og:url" content="https://scccurri.github.io/portfolio/index.html" /> -->
-    <meta property="og:title" content="박주형 이력서입니다" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="박주형 이력서입니다." />
-    <meta property="og:site_name" content="SCC Portfolio" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <title>박주형 - 구매조달 시스템</title>
-    <style>
-        :root {
-            --main-bg-color: #fff;
-            --main-font-color: #1d1f20;
-            font-family: "NanumSquareOTF-Regular", Helvetica;
-            font-weight: 400;
-            --card-margin: 6.1rem 6.8rem 0;
-            --card-height: 30.1rem;
-            --card-border-radius: 0.9rem;
-            --text-color-secondary: #4a4a4a;
-        }
-
-        body {
-            margin: 0;
-            background-image: url("image/bg.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            overflow-x: hidden;
-        }
-
-        .project-card {
-            margin: var(--card-margin);
-            height: var(--card-height);
-            border-radius: var(--card-border-radius);
-            background: var(--main-bg-color);
-            box-shadow: 0 0.3rem 1.3rem 0 rgba(0, 0, 0, 0.2);
-            display: grid;
-            grid-template-areas:
-                "top top top"
-                "name name image"
-                "icons tool image"
-                "bottom bottom bottom";
-            grid-template-rows: 3.1rem 15.1rem 8.3rem 3.1rem;
-            grid-template-columns: 15.6rem 15.6rem 1fr;
-            overflow: hidden;
-        }
-
-        .project-card>* {
-            background-color: var(--main-bg-color);
-            border-right: 1px solid #000;
-            border-bottom: 1px solid #000;
-        }
-
-        .project-card::before,
-        .project-card::after {
-            content: "";
-            background-color: var(--main-bg-color);
-        }
-
-        .project-card::before {
-            grid-area: top;
-            border-bottom: 1px solid #000;
-        }
-
-        .project-card::after {
-            grid-area: bottom;
-            border-top: 1px solid #000;
-            border-bottom: none;
-        }
-
-        .project-card-name {
-            grid-area: name;
-            padding: 0 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1.5rem;
-            border-left: none;
-        }
-
-        .project-card-image {
-            grid-area: image;
-            padding: 0.6rem;
-            border-right: none;
-            border-bottom: none;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .project-image {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .project-card-icons {
-            grid-area: icons;
-            padding: 0.6rem;
-            border-left: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 1.5rem;
-            border-bottom: none;
-            gap: 0.6rem;
-        }
-
-        .project-row,
-        .project-github-link {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .project-github-link a {
-            color: var(--main-font-color);
-            font-size: 0.6rem;
-            text-decoration: none;
-        }
-
-        .project-github-link a:hover {
-            text-decoration: underline;
-        }
-
-        .project-icon {
-            width: 1.3rem;
-            height: 1.3rem;
-        }
-
-        .project-content-detail {
-            font-size: 0.6rem;
-        }
-
-        .project-card-tool {
-            grid-area: tool;
-            padding: 0.6rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 0.8rem;
-            border-bottom: none;
-        }
-
-        .project-title {
-            color: var(--main-font-color);
-            font-size: 2.3rem;
-            line-height: normal;
-        }
-
-        .project-content {
-            color: var(--text-color-secondary);
-            font-size: 0.7rem;
-            line-height: 1.4rem;
-        }
-
-        .project-content-detail {
-            color: var(--text-color-secondary);
-            font-size: 0.6rem;
-            line-height: normal;
-        }
-
-        .project-tool-detail {
-            color: var(--main-font-color);
-            font-size: 0.6rem;
-            line-height: normal;
-        }
-
-        .project-tool-point {
-            width: 0.5rem;
-            height: 0.5rem;
-        }
-
-        .project-pictures {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            margin: 3.1rem;
-            overflow: hidden;
-            height: 25rem;
-        }
-
-        .project-picture-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .project-picture {
-            position: absolute;
-            transition: all 0.5s ease-in-out;
-            width: 34rem;
-            height: 19.1rem;
-        }
-
-        .project-picture.side {
-            transform: scale(0.75) translateX(-50%);
-            z-index: 1;
-            opacity: 0.3;
-        }
-
-        .project-picture.side.right {
-            transform: scale(0.75) translateX(50%);
-        }
-
-        .project-picture.center {
-            z-index: 2;
-            transform: scale(1) translateX(0);
-            opacity: 1;
-        }
-
-        .project-div-image {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border-radius: 0.9rem;
-            object-fit: cover;
-        }
-
-        .project-prev,
-        .project-next {
-            position: absolute;
-            cursor: pointer;
-            z-index: 3;
-        }
-
-        .project-prev {
-            left: 0.6rem;
-        }
-
-        .project-next {
-            right: 0.6rem;
-        }
-
-        .detail-card {
-            border-top: 1px solid #000;
-            display: grid;
-            grid-template-areas:
-                "a list ts b"
-                "c d d e";
-            grid-template-columns: 6.8rem 1fr 1fr 6.8rem;
-            grid-template-rows: min-content 2.1rem;
-            overflow: hidden;
-        }
-
-        .detail-card>* {
-            border-right: 1px solid #000;
-            border-bottom: 1px solid #000;
-        }
-
-        .detail-card-a {
-            grid-area: a;
-        }
-
-        .detail-card-b {
-            grid-area: b;
-            border-right: none;
-        }
-
-        .detail-card-c {
-            grid-area: c;
-        }
-
-        .detail-card-d {
-            grid-area: d;
-        }
-
-        .detail-card-e {
-            grid-area: e;
-            border-right: none;
-        }
-
-        .detail-card-list {
-            grid-area: list;
-            padding: 2.1rem;
-            border-right: 1px solid #000;
-            overflow: hidden;
-        }
-
-        .detail-card-wrapper {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .detail-card-title {
-            color: var(--main-font-color);
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
-        }
-
-        .detail-card-ts {
-            grid-area: ts;
-            padding: 3.1rem;
-            font-size: 0.8rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .detail-card-title {
-            display: inline-flex;
-            padding: 0.3rem 1.3rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.8rem;
-            border-radius: 1.8rem;
-            font-size: 0.8rem;
-            background: var(--main-font-color);
-            color: white;
-            width: fit-content;
-            margin: 0.9rem 0;
-        }
-
-        .project-card-detail {
-            color: var(--main-font-color);
-            font-size: 0.8rem;
-            line-height: normal;
-        }
-
-        .project-card-ex {
-            color: var(--text-color-secondary);
-            font-family: var(--font-family-main);
-            font-size: 0.8rem;
-            line-height: normal;
-            margin: 0.3rem 0 0.8rem 1.1rem;
-        }
-
-        @media (max-width: 64rem) {
-
-            .project-card {
-                margin: 3rem;
-                height: auto;
-                grid-template-areas:
-                    "top top"
-                    "name image"
-                    "icons tool"
-                    "bottom bottom";
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-            }
-        }
-
-        @media (max-width: 48rem) {
-            .project-card {
-                margin: 1.3rem;
-                grid-template-areas:
-                    "image"
-                    "name"
-                    "icons"
-                    "tool";
-                grid-template-rows: auto auto auto auto;
-                grid-template-columns: 1fr;
-                height: auto;
-            }
-
-            .project-card-image {
-                grid-area: image;
-                width: 100%;
-                height: auto;
-            }
-
-            .project-card-name {
-                grid-area: name;
-                padding: 1rem;
-            }
-
-            .project-content {
-                padding: 0 1rem;
-                font-size: 0.9rem;
-                line-height: 1.5;
-            }
-
-            .project-card-icons {
-                grid-area: icons;
-            }
-
-            .project-card-tool {
-                grid-area: tool;
-            }
-
-            .project-card-name,
-            .project-card-image,
-            .project-card-icons,
-            .project-card-tool {
-                padding: 0.6rem;
-                border-right: none;
-                border-bottom: 1px solid #000;
-            }
-
-            .project-card-tool {
-                border-bottom: none;
-            }
-
-            .project-card-icons,
-            .project-card-tool {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.8rem;
-            }
-
-            .project-row {
-                width: 100%;
-            }
-
-            .project-pictures {
-                margin: 1.5rem;
-            }
-
-            .project-picture-wrapper {
-                width: 100%;
-            }
-
-            .project-div-image {
-                width: 80%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-                border-radius: 0.9rem;
-            }
-
-            .project-picture.side {
-                display: none;
-            }
-
-            .project-picture.center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: auto;
-            }
-
-            .detail-card {
-                grid-template-areas:
-                    "a list b"
-                    "c ts d"
-                    "e e e";
-                grid-template-columns: 1rem 1fr 1rem;
-                grid-template-rows: auto auto 2.1rem;
-            }
-
-            .detail-card-d {
-                grid-area: d;
-                border-right: none;
-            }
-
-            .detail-card-list,
-            .detail-card-ts {
-                padding: 1.5rem;
-            }
-        }
-
-        a:focus,
-        button:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 2px solid var(--highlight-color);
-            outline-offset: 2px;
-        }
-
-        .project-content,
-        .project-content-detail,
-        .project-card-ex {
-            color: var(--text-color-secondary);
-            font-size: 0.8rem;
-            line-height: normal;
-        }
-
-        .project-content {
-            font-size: 0.7rem;
-            line-height: 1.4rem;
-        }
-
-        .project-content-detail {
-            font-size: 0.6rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>구매조달 시스템 · 박주형</title>
+  <meta name="description" content="제품 등록부터 계약, 발주, 검수, 입고, 출고까지 구매 업무 전 과정을 처리하는 Spring Boot 기반 시스템." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="구매조달 시스템 · 박주형" />
+  <meta property="og:description" content="제품 등록부터 계약, 발주, 검수, 입고, 출고까지 구매 업무 전 과정을 처리하는 Spring Boot 기반 시스템." />
+  <meta property="og:image" content="image/Connect_Thumbnail.png" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var dark = saved
+          ? saved === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/base.css" />
 </head>
 
 <body>
-    <div class="background">
-        <div class="project-card">
-            <div class="project-card-name">
-                <div class="project-title">구매조달 시스템 </div>
-            
-                <div class="project-content">
-                    구매조달 시스템이라는 프로젝트는 기업의 구매 및 조달 과정을 효율적으로 관리하기 위해 설계된 통합 솔루션입니다.
-                    이 프로젝트는 Java를 기반으로하는 Spring boot를 주로 사용하고 MariaDB를 사용해서 데이터를 관리하였습니다. 주요기능으로는
-                    제품등록과 동시에 생산계획을 등록하고 , 제품에 맞는 품목정보를 등록 , 업체정보 , 계약등록 , 조달계획등록 , 계약완료 , 입고 , 출고 , 금액관리 등이 주요기능입니다.
-                    사용자 별로 권한에 따라서 이용할 수 있는 기능에 대해 제한을 두었습니다.
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
 
-
-                    <!-- GlobalConnect는 유학생들을 위한 커뮤니티 플랫폼으로, 유학생들이 정보를 공유하고 네트워킹할 수 있도록 다양한 기능을 제공합니다. 이 프로젝트는 React와
-                    Node.js를 기반으로 개발되었으며, 주요 기능으로는 게시판, 실시간 채팅, 이벤트 관리 등이 있습니다. MongoDB를 사용하여 데이터를 관리하고, Socket.io를 통해
-                    실시간 통신을 구현하였습니다. 또한 AWS를 이용해 안정적인 호스팅과 배포를 지원합니다. GlobalConnect는 유학생들의 생활을 더욱 편리하고 풍요롭게 만드는 것을 목표로
-                    하며, 팀원들의 협업과 기술적 도전을 통해 완성되었습니다. -->
-                </div>
-            </div>
-            <div class="project-card-image">
-                <img src="image/Connect_main.png" class="project-image" />
-            </div>
-            <div class="project-card-icons">
-                <div class="project-row">
-                    <img src="image/period.svg" class="project-icon" />
-                    <div class="project-content-detail">24.05 ~ 24.6 / 1개월</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/people.svg" class="project-icon" />
-                    <div class="project-content-detail">3명</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/role.svg" class="project-icon" />
-                    <div class="project-content-detail">프론트엔드 , 백엔드 총 3명으로 구성되었습니다.</div>
-                </div>
-                <div class="project-github-link">
-                    <img src="image/github.svg" class="project-icon" />
-                    <a href="https://github.com/username/repository" target="_blank" rel="noopener noreferrer">GitHub
-                         Fork</a>
-                </div>
-            </div>
-            <div class="project-card-tool">
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">HTML , CSS , Js , Thymeleaf</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">Spring Boot</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">MariaDB</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-tool-detail">FileZilla , putty</div>
-                </div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <a href="image/CONNECT.pdf" target="_blank" style="text-decoration: none; "><div class="project-tool-detail">▶ 자료보기 ◀</div></a>
-                </div>
-
-            </div>
-        </div>
-        <div class="project-pictures">
-            <img class="project-prev" src="image/prev.svg" onclick="moveImages('prev')" />
-            <div class="project-picture-wrapper">
-                <div class="project-picture side" id="image1">
-                    <img src="image/Connect_프로세스.png" class="project-div-image" />
-                </div>
-                <div class="project-picture center" id="image2">
-                    <img src="image/Connect_계약.png" class="project-div-image" />
-                </div>
-                <div class="project-picture side" id="image3">
-                    <img src="image/Connect_통계.png" class="project-div-image" />
-                </div>
-                <div class="project-picture side" id="image3">
-                    <img src="image/Connect_DB.png" class="project-div-image" />
-                </div>
-            </div>
-            <img class="project-next" src="image/next.svg" onclick="moveImages('next')" />
-        </div>
-        <div class="detail-card">
-            <div class="detail-card-a"></div>
-            <div class="detail-card-b"></div>
-            <div class="detail-card-c"></div>
-            <div class="detail-card-d"></div>
-            <div class="detail-card-e"></div>
-            <div class="detail-card-list">
-                <div class="detail-card-wrapper">
-                    <div class="detail-card-title">사용자1 - 제품 , 업체등록 계정</div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">사용자들이 여러 제품을 등록하고 , 제품에 대한 생산계획 등록 기능</div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">제품명 등록시 중복체크를 통해서 중복된 제품명 등록 방지</div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">원하는 업체 등록가능.</div>
-                    </div>
-                    <br>
-                    <div class="detail-card-title">사용자2 - 품목등록 , 계획 수립 , 발주 , 검수 , 입고 , 출고 계정</div>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">제품에 대한 품목에 대한 세부정보를 입력하여 품목 등록기능.</div>
-                    </div>
-                   <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">등록된 품목에 대한 등록된 업체와 계약서 업로드를 통해서 계약 등록 기능.</div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">계약된 품목에 대해 조달계획 수립.
-                            <br>제품의 생산계획 보다 빠르게 입력할 수 없도록 제한.
-                        </div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">계획이 등록된 품목들만 리스트 불러와서 발주 기능.
-                            <br>발주하려 하는 갯수와 , 특이사항을 입력하여 발주 진행.
-                        </div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">발주된 품목이 입고전 진척검수를 진행한다.
-                            <br>검수를 통해서 발주된 품목이 올바르게 왔는지 오프라인으로 확인하고 체크한다.
-                            <br>진척검수는 여러번을 통해서 계획을 수립하여 진행가능 하다.
-                        </div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">메뉴의 "발주 진행 현황"을 통해서 각 단계별 진행중인 품목의 갯수를 그래프로 확인가능
-                        </div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">진척검수까지 완료된 품목은 입고 버튼을 통해서 완벽한 입고를 진행한다.
-                        </div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">입고된 품목들의 리스트를 보여주고 출고가 진행되면 리스트목록중 갯수 컬럼에 실시간으로 반영된다.
-                        </div>
-                    </div>
-                    <br>
-                    <div class="project-row">
-                        <img src="image/point.svg" class="project-tool-point" />
-                        <div class="project-card-detail">재고금액 현황관리를 통해서 재고의 금액을 확인가능하고 , 대,중,소 분류별로 재고의 금액을 확인가능.
-                        </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            <div class="detail-card-ts">
-                <div class="detail-card-title">마스터 계정</div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">계정별로 분리된 기능을 통합적으로 사용가능</div>
-                </div>
-                <div class="detail-card-title">배포</div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">교육원 내의 서버배포</div>
-                </div>
-                <div class="project-card-ex">테스트를 끝낸 프로젝트의 jar파일을 생성하여 교육원 내의 서버PC에 Putty를 통해서 접속한다.
-                    <br>서버PC에 DB를 생성하고 FileZilla를통해서 Jar파일을 전송시키고 cmd에서 명령어를 통해서 jar를 백그라운드 실행명령어로 실행시켜 상시 실행시킨다
-                </div>
-
-
- 
-                <!-- <div class="detail-card-title">실시간 채팅 안정성 문제</div>
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">문제 인식</div>
-                </div>
-                <div class="project-card-ex">실시간 채팅 기능 도입 후, 사용자가 많아지면서 채팅 메시지가 지연되거나 연결이 자주 끊기는 문제가 발생했습니다. 이는 사용자 경험을
-                    크게 저해하는 요소로 작용했습니다.</div>
-
-                <div class="project-row">
-                    <img src="image/point.svg" class="project-tool-point" />
-                    <div class="project-card-detail">문제 해결</div>
-                </div>
-                <div class="project-card-ex">서버 로그와 네트워크 트래픽을 분석하여 Socket.io 연결이 끊어지거나 메시지 지연이 발생하는 원인을 파악하여, Socket.io
-                    서버를 여러 대로 확장하고, 로드 밸런서를 사용하여 부하를 분산시키고 메모리 누수 현상을 방지하기 위해 불필요한 데이터와 연결을 주기적으로 정리했습니다. </div> -->
-
-            </div>
-        </div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="top-name" href="index.html">박주형</a>
+      <a class="back" href="index.html#projects">← 프로젝트 목록</a>
+      <button class="theme-toggle" type="button" aria-label="어두운 화면으로 전환">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" />
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z" />
+        </svg>
+      </button>
     </div>
-    </div>
-    <script>
+  </header>
 
-alert("자료보기를 통해서 파일자료 확인가능합니다.");
+  <main id="main">
+    <section class="wrap pj-hero">
+      <h1 class="pj-title reveal">구매조달 시스템</h1>
+      <p class="pj-summary reveal reveal-2">
+        기업의 구매·조달 과정을 하나의 시스템으로 묶은 프로젝트입니다. 제품을 등록하면서
+        생산계획을 함께 잡고, 품목과 업체를 연결해 계약을 맺은 뒤 발주부터 출고까지
+        상태를 넘겨가며 처리합니다. 계정 권한에 따라 접근할 수 있는 기능을 나눴습니다.
+      </p>
 
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     setLanguage();
+      <div class="pj-cover reveal reveal-3">
+        <img src="image/Connect_main.png" alt="구매조달 시스템 메인 화면" />
+      </div>
 
-        //     if (document.getElementById("image1")) {
-        //         updateImages();
-        //     }
-        // });
+      <dl class="meta">
+        <div>
+          <dt class="fact-key">기간</dt>
+          <dd class="fact-val">2024.05 – 2024.06 · 1개월</dd>
+        </div>
+        <div>
+          <dt class="fact-key">인원</dt>
+          <dd class="fact-val">3명</dd>
+        </div>
+        <div>
+          <dt class="fact-key">역할</dt>
+          <dd class="fact-val">프론트엔드 · 백엔드</dd>
+        </div>
+        <div>
+          <dt class="fact-key">기술</dt>
+          <dd class="fact-val">Spring Boot · MariaDB · Thymeleaf</dd>
+        </div>
+      </dl>
 
-        // function setLanguage() {
-        //     const lang = getUrlParameter("lang") || "ko";
-        //     const mode = getUrlParameter("mode");
-        //     const currentPage = window.location.pathname.split("/").pop();
-        //     const isCorrectPage =
-        //         (lang === "en" &&
-        //             (currentPage === "project_en.html" ||
-        //                 currentPage === "project2_en.html")) ||
-        //         (lang === "ko" &&
-        //             (currentPage === "project.html" || currentPage === "project2.html"));
+      <p class="actions">
+        <a class="btn" href="image/CONNECT.pdf" target="_blank" rel="noopener">발표 자료 열기 (PDF)</a>
+      </p>
+    </section>
 
-        //     if (!isCorrectPage) {
-        //         const targetPage =
-        //             lang === "en"
-        //                 ? currentPage === "project2.html" || currentPage === "project2_en.html"
-        //                     ? "project2_en.html"
-        //                     : "project_en.html"
-        //                 : currentPage === "project2.html" || currentPage === "project2_en.html"
-        //                     ? "project2.html"
-        //                     : "project.html";
-        //         const queryString = [];
-        //         if (lang) queryString.push(`lang=${lang}`);
-        //         if (mode) queryString.push(`mode=${mode}`);
-        //         const queryPart = queryString.length > 0 ? `?${queryString.join("&")}` : "";
-        //         window.location.href = targetPage + queryPart;
-        //     }
-        // }
+    <section class="wrap sec">
+      <div class="sec-head">
+        <h2 class="sec-title">업무 흐름</h2>
+        <p class="sec-note">각 단계를 통과해야 다음 단계로 넘어갑니다</p>
+      </div>
 
-        function getUrlParameter(name) {
-            const url = window.location.href;
-            const param = url.match(new RegExp(`[?&]${name}=([^&]*)`));
-            return param && param[1];
-        }
+      <ol class="flow">
+        <li class="flow-step">
+          <b>제품 · 생산계획</b>
+          <span>제품명 중복 확인 후 등록</span>
+        </li>
+        <li class="flow-step">
+          <b>품목 · 업체</b>
+          <span>제품에 딸린 품목 세부정보 입력</span>
+        </li>
+        <li class="flow-step">
+          <b>계약</b>
+          <span>계약서 업로드로 확정</span>
+        </li>
+        <li class="flow-step">
+          <b>조달계획</b>
+          <span>생산계획보다 앞선 날짜는 차단</span>
+        </li>
+        <li class="flow-step">
+          <b>발주</b>
+          <span>수량과 특이사항 입력</span>
+        </li>
+        <li class="flow-step">
+          <b>진척검수</b>
+          <span>여러 차례로 나눠 진행 가능</span>
+        </li>
+        <li class="flow-step">
+          <b>입고 · 출고</b>
+          <span>출고 시 재고 수량 즉시 반영</span>
+        </li>
+      </ol>
+    </section>
 
-        let currentImageIndex = 0;
-        const projectImages = {
-            project1: ["p1.png", "p1-detail1.png", "p1-detail2.png"],
-            project2: ["p2.png", "p2-detail1.png", "p2-detail2.png"],
-        };
+    <section class="wrap sec">
+      <div class="gallery-head">
+        <h2 class="sec-title">화면</h2>
+        <div class="gallery-nav">
+          <button class="gnav" type="button" data-gallery-nav="g1" data-dir="prev" aria-label="이전 화면">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 5 8 12l7 7" />
+            </svg>
+          </button>
+          <button class="gnav" type="button" data-gallery-nav="g1" data-dir="next" aria-label="다음 화면">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-        function updateImages(isAnimating) {
-            const images = document.querySelectorAll(".project-picture");
-            const isMobile = window.innerWidth <= 768;
+      <div class="gallery" data-gallery="g1">
+        <figure>
+          <a href="image/Connect_프로세스.png" target="_blank" rel="noopener">
+            <img src="image/Connect_프로세스.png" alt="발주 진행 현황 화면" loading="lazy" />
+          </a>
+          <figcaption>발주 진행 현황 — 단계별 품목 수를 그래프로 확인</figcaption>
+        </figure>
+        <figure>
+          <a href="image/Connect_계약.png" target="_blank" rel="noopener">
+            <img src="image/Connect_계약.png" alt="계약 등록 화면" loading="lazy" />
+          </a>
+          <figcaption>계약 등록 — 품목과 업체를 연결하고 계약서를 첨부</figcaption>
+        </figure>
+        <figure>
+          <a href="image/Connect_통계.png" target="_blank" rel="noopener">
+            <img src="image/Connect_통계.png" alt="금액 통계 화면" loading="lazy" />
+          </a>
+          <figcaption>재고 금액 현황 — 대·중·소 분류별 집계</figcaption>
+        </figure>
+        <figure>
+          <a href="image/Connect_DB.png" target="_blank" rel="noopener">
+            <img src="image/Connect_DB.png" alt="데이터베이스 구조도" loading="lazy" />
+          </a>
+          <figcaption>테이블 구조</figcaption>
+        </figure>
+      </div>
+    </section>
 
-            images.forEach((image, index) => {
-                const position = (index - currentImageIndex + 3) % 3;
+    <section class="wrap sec">
+      <div class="sec-head">
+        <h2 class="sec-title">구현한 기능</h2>
+      </div>
 
-                if (position === 0) {
-                    image.className = `project-picture center ${isAnimating ? "animating" : ""
-                        }`;
-                    image.style.left = isMobile ? "0" : "50%";
-                    image.style.transform = isMobile ? "none" : "translate(-50%, 0) scale(1)";
-                } else if (position === 1) {
-                    image.className = `project-picture side right ${isAnimating ? "animating" : ""
-                        }`;
-                    image.style.left = isMobile ? "0" : "75%";
-                    image.style.transform = isMobile
-                        ? "none"
-                        : "translate(-50%, 0) scale(0.75)";
-                } else {
-                    image.className = `project-picture side ${isAnimating ? "animating" : ""
-                        }`;
-                    image.style.left = isMobile ? "0" : "25%";
-                    image.style.transform = isMobile
-                        ? "none"
-                        : "translate(-50%, 0) scale(0.75)";
-                }
+      <div class="blocks">
+        <div class="block">
+          <h3 class="block-title">제품 · 업체 등록 계정</h3>
+          <ul class="points">
+            <li>여러 제품을 등록하고 제품별 생산계획을 함께 입력합니다.</li>
+            <li>제품명 등록 시 중복 확인을 걸어 같은 이름이 두 번 들어가지 않게 했습니다.</li>
+            <li>거래할 업체를 직접 등록합니다.</li>
+          </ul>
+        </div>
 
-                image.style.opacity = position === 0 ? "1" : "0.3";
-                image.style.zIndex = position === 0 ? "2" : "1";
-            });
-        }
+        <div class="block">
+          <h3 class="block-title">조달 · 물류 계정</h3>
+          <ul class="points">
+            <li>제품에 속한 품목의 세부정보를 입력해 품목을 등록합니다.</li>
+            <li>등록된 품목과 업체를 묶고 계약서를 올려 계약을 확정합니다.</li>
+            <li>계약된 품목의 조달계획을 세웁니다. 제품 생산계획보다 앞선 날짜는 입력되지 않도록 막았습니다.</li>
+            <li>계획이 잡힌 품목만 목록에 불러와 수량과 특이사항을 입력해 발주합니다.</li>
+            <li>입고 전 진척검수로 발주 품목이 제대로 왔는지 오프라인 확인 후 체크합니다. 검수는 여러 차례로 나눠 진행할 수 있습니다.</li>
+            <li>발주 진행 현황 화면에서 단계별로 진행 중인 품목 수를 그래프로 봅니다.</li>
+            <li>검수까지 끝난 품목은 입고 처리하고, 출고가 일어나면 재고 목록의 수량 컬럼에 곧바로 반영됩니다.</li>
+            <li>재고 금액 현황에서 대·중·소 분류별 금액을 확인합니다.</li>
+          </ul>
+        </div>
 
-        function moveImages(direction) {
-            const isMobile = window.innerWidth <= 768;
+        <div class="block">
+          <h3 class="block-title">마스터 계정</h3>
+          <ul class="points">
+            <li>계정별로 나뉜 기능을 한곳에서 통합해 사용합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            if (!isMobile) {
-                const wrapper = document.querySelector(".project-picture-wrapper");
-                wrapper.style.transition = "transform 0.5s ease-in-out";
-            }
+    <section class="wrap sec">
+      <div class="sec-head">
+        <h2 class="sec-title">배포</h2>
+      </div>
+      <div class="callout">
+        <p class="callout-title">교육원 내부 서버에 상시 실행</p>
+        <p>
+          테스트를 마친 프로젝트를 jar로 빌드하고, PuTTY로 서버 PC에 접속해 DB를 생성했습니다.
+          FileZilla로 jar를 전송한 뒤 백그라운드 실행 명령으로 띄워 계속 돌아가도록 했습니다.
+        </p>
+      </div>
+    </section>
 
-            if (direction === "next") {
-                currentImageIndex = (currentImageIndex + 1) % 3;
-            } else if (direction === "prev") {
-                currentImageIndex = (currentImageIndex - 1 + 3) % 3;
-            }
+    <nav class="wrap sec" aria-label="다른 프로젝트">
+      <p class="actions">
+        <a class="btn btn-ghost" href="index.html#projects">← 프로젝트 목록</a>
+        <a class="btn btn-ghost" href="project2.html">다음: 운동이지 →</a>
+      </p>
+    </nav>
+  </main>
 
-            updateImages(true);
+  <footer class="wrap foot">
+    <p>박주형 · 백엔드 개발자</p>
+    <p><a href="mailto:jah05159@naver.com">jah05159@naver.com</a></p>
+  </footer>
 
-            setTimeout(() => {
-                updateImages(false);
-            }, 500);
-        }
-
-    </script>
+  <script src="assets/site.js"></script>
 </body>
 
 </html>
